@@ -202,6 +202,7 @@ function renderBurndown() {
                 }
             },
             plugins: {
+                title: { display: true, text: 'Security Remediation - Burndown Chart (UX)' },
                 tooltip: { mode: 'index', intersect: false },
                 legend: { position: 'top' }
             }

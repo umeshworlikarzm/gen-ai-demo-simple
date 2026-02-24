@@ -35,6 +35,8 @@
             form#burndown-form{flex-direction:column}
             form#burndown-form label{min-width:unset;width:100%}
         }
+        .chart-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+        .chart-header h2{margin:0;font-size:18px;color:#14396a}
     </style>
 </head>
 <body> 
@@ -68,6 +70,9 @@
     </section>
 
     <section style="max-width:900px;margin-top:20px;">
+        <div class="chart-header">
+            <h2>Burndown Chart</h2>
+        </div>
         <canvas id="burndownChart" width="900" height="400"></canvas>
     </section>
 
