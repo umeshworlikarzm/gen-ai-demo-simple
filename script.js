@@ -18,12 +18,12 @@ function removeRowHandler(e) {
 }
 
 function loadSampleData() {
-    // Populate actual rows for every Thursday between 12 Feb 2026 and 16 Apr 2026
+    // Populate actual rows for every Thursday between 12 Feb 2026 and 09 Apr 2026
     const start = '2026-02-12';
-    const end = '2026-04-16';
+    const end = '2026-04-09';
     document.getElementById('startDate').value = start;
     document.getElementById('estDate').value = end;
-    const total = 18;
+    const total = 15;
     document.getElementById('totalPackages').value = total;
     const dates = getThursdaysBetween(start, end);
     const tbody = document.querySelector('#actualTable tbody');
@@ -54,7 +54,7 @@ function getThursdaysBetween(startISO, endISO) {
 // Load a user-provided list of dates (day-month short form) as individual completions.
 function loadUserProvidedDates() {
     const raw = [
-        '12-Mar','12-Mar','26-Feb','16-Apr','19-Feb','19-Mar','26-Mar','26-Feb','26-Mar','26-Mar','2-Apr','5-Mar','2-Apr','5-Mar','16-Apr','9-Apr','12-Mar','19-Mar'
+        '12-Mar','12-Mar','26-Feb','19-Feb','19-Mar','26-Mar','26-Feb','26-Mar','26-Mar','2-Apr','5-Mar','2-Apr','5-Mar','9-Apr','12-Mar','19-Mar'
     ];
     const monthMap = {Jan:'01',Feb:'02',Mar:'03',Apr:'04',May:'05',Jun:'06',Jul:'07',Aug:'08',Sep:'09',Oct:'10',Nov:'11',Dec:'12'};
     const year = '2026';
@@ -73,7 +73,7 @@ function loadUserProvidedDates() {
     const dates = Object.keys(counts).sort();
     const total = Object.values(counts).reduce((s,v) => s+v, 0);
     document.getElementById('startDate').value = '2026-02-12';
-    document.getElementById('estDate').value = '2026-04-16';
+    document.getElementById('estDate').value = '2026-04-09';
     document.getElementById('totalPackages').value = total;
     const tbody = document.querySelector('#actualTable tbody');
     tbody.innerHTML = '';
