@@ -235,7 +235,7 @@ function exportChartPNG() {
     const url = burndownChart.toBase64Image();
     const a = document.createElement('a');
     a.href = url;
-    a.download = 'burndown.png';
+    a.download = 'UX-burndown.png';
     document.body.appendChild(a);
     a.click();
     a.remove();
